@@ -75,9 +75,9 @@ export function Hero() {
           className="animate-fade-up relative mx-auto mt-16 max-w-5xl md:mt-24"
           style={{ animationDelay: "300ms" }}
         >
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
+          <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-3 md:gap-5">
             {/* Card 1 — Input */}
-            <div className="group relative rounded-3xl border border-border bg-white p-6 shadow-[0_20px_60px_-30px_rgba(11,29,81,0.25)] transition-all hover:-translate-y-0.5">
+            <div className="group relative flex flex-col rounded-3xl border border-border bg-white p-6 shadow-[0_20px_60px_-30px_rgba(11,29,81,0.25)] transition-all hover:-translate-y-0.5">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-violet">
                   Input
@@ -93,12 +93,27 @@ export function Hero() {
                 One guided conversation.
               </p>
               <p className="mt-1.5 text-sm text-muted-foreground">
-                No prep. No script. No equipment.
+                Casual, producer-led, over the phone or on video.
               </p>
+              <ul className="mt-5 space-y-2 text-[13px] text-brand-blue/90">
+                {[
+                  "No prep required",
+                  "No script to memorize",
+                  "No camera or mic on you",
+                  "U.S.-based producer",
+                ].map((li) => (
+                  <li key={li} className="flex items-center gap-2">
+                    <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-violet/15">
+                      <Check className="h-2.5 w-2.5 text-brand-violet" strokeWidth={3} />
+                    </span>
+                    {li}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Card 2 — Production */}
-            <div className="group relative rounded-3xl border border-border bg-white p-6 shadow-[0_20px_60px_-30px_rgba(11,29,81,0.25)] transition-all hover:-translate-y-0.5 md:mt-6">
+            <div className="group relative flex flex-col rounded-3xl border border-border bg-white p-6 shadow-[0_20px_60px_-30px_rgba(11,29,81,0.25)] transition-all hover:-translate-y-0.5">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-violet">
                   Production
@@ -111,15 +126,30 @@ export function Hero() {
                 <Film className="h-5 w-5" strokeWidth={1.75} />
               </div>
               <p className="mt-4 font-display text-xl font-semibold leading-snug text-brand-blue">
-                Edited, captioned, delivered.
+                Edited, captioned, packaged.
               </p>
               <p className="mt-1.5 text-sm text-muted-foreground">
-                Vertical cuts, custom thumbnails, licensed audio.
+                A studio pass on every clip — no back-and-forth.
               </p>
+              <ul className="mt-5 space-y-2 text-[13px] text-brand-blue/90">
+                {[
+                  "Vertical 9:16 cuts",
+                  "Hook-first captions",
+                  "Licensed audio & motion",
+                  "Custom thumbnails × 20",
+                ].map((li) => (
+                  <li key={li} className="flex items-center gap-2">
+                    <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-violet/15">
+                      <Check className="h-2.5 w-2.5 text-brand-violet" strokeWidth={3} />
+                    </span>
+                    {li}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Card 3 — Output */}
-            <div className="group relative overflow-hidden rounded-3xl border border-transparent bg-brand-blue p-6 text-white shadow-[0_30px_80px_-30px_rgba(11,29,81,0.55)] transition-all hover:-translate-y-0.5">
+            <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-transparent bg-brand-blue p-6 text-white shadow-[0_30px_80px_-30px_rgba(11,29,81,0.55)] transition-all hover:-translate-y-0.5">
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 opacity-70"
@@ -128,7 +158,7 @@ export function Hero() {
                     "radial-gradient(400px 200px at 100% 0%, rgba(139,124,252,0.55), transparent 55%), radial-gradient(300px 200px at 0% 100%, rgba(109,93,251,0.3), transparent 55%)",
                 }}
               />
-              <div className="relative">
+              <div className="relative flex flex-1 flex-col">
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/70">
                     Delivery
@@ -137,24 +167,29 @@ export function Hero() {
                     Ready to publish
                   </span>
                 </div>
-                <p className="mt-6 font-display text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-                  20
-                </p>
+                <div className="mt-6 flex items-baseline gap-2">
+                  <span className="font-display text-5xl font-semibold tracking-tight text-white sm:text-6xl">
+                    20
+                  </span>
+                  <span className="text-sm text-white/80">
+                    videos per session
+                  </span>
+                </div>
                 <p className="mt-1 text-sm text-white/80">
-                  short-form videos per session
+                  Everything you need, nothing left to edit.
                 </p>
-                <ul className="mt-5 space-y-2 text-[13px] text-white/85">
+                <ul className="mt-5 space-y-2 text-[13px] text-white/90">
                   {[
                     "Reels, Shorts, TikTok — vertical",
                     "Custom thumbnails × 20",
                     "10-day posting schedule",
-                    "Titles &amp; descriptions",
+                    "Titles & descriptions",
                   ].map((li) => (
                     <li key={li} className="flex items-center gap-2">
                       <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white/20">
                         <Check className="h-2.5 w-2.5" strokeWidth={3} />
                       </span>
-                      <span dangerouslySetInnerHTML={{ __html: li }} />
+                      {li}
                     </li>
                   ))}
                 </ul>

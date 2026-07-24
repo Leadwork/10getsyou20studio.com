@@ -11,7 +11,7 @@ const points = [
     icon: Compass,
     title: "Understands your market, clients, and competition",
     description:
-      "A guided conversation goes deeper than any script or prompt — because your producer already knows the terrain you&apos;re selling in.",
+      "A guided conversation goes deeper than any script or prompt — because your producer already knows the terrain you're selling in.",
   },
   {
     icon: Users,
@@ -55,14 +55,12 @@ export function RealProducers() {
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-violet/10 text-brand-violet transition-colors group-hover:bg-brand-violet group-hover:text-white">
                 <Icon className="h-5 w-5" strokeWidth={1.75} />
               </div>
-              <h3
-                className="mt-5 text-lg font-semibold text-brand-blue"
-                dangerouslySetInnerHTML={{ __html: title }}
-              />
-              <p
-                className="mt-2 text-[15px] leading-relaxed text-muted-foreground"
-                dangerouslySetInnerHTML={{ __html: description }}
-              />
+              <h3 className="mt-5 text-lg font-semibold text-brand-blue">
+                {title}
+              </h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
+                {description}
+              </p>
             </div>
           ))}
         </div>

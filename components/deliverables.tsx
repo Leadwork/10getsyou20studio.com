@@ -24,7 +24,7 @@ const deliverables: Deliverable[] = [
   },
   {
     qty: "20",
-    title: "Titles &amp; descriptions",
+    title: "Titles & descriptions",
     description: "Suggested metadata for every video, ready to paste in.",
   },
   {
@@ -71,14 +71,12 @@ export function Deliverables() {
                 </div>
               </div>
               <div className="min-w-0">
-                <h3
-                  className="text-[15px] font-semibold text-brand-blue"
-                  dangerouslySetInnerHTML={{ __html: d.title }}
-                />
-                <p
-                  className="mt-1 text-[13.5px] leading-relaxed text-muted-foreground"
-                  dangerouslySetInnerHTML={{ __html: d.description }}
-                />
+                <h3 className="text-[15px] font-semibold text-brand-blue">
+                  {d.title}
+                </h3>
+                <p className="mt-1 text-[13.5px] leading-relaxed text-muted-foreground">
+                  {d.description}
+                </p>
               </div>
             </li>
           ))}

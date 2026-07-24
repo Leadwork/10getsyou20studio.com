@@ -14,7 +14,7 @@ const tiers = [
       "20 short-form videos",
       "20 custom thumbnails",
       "10-day posting schedule",
-      "Titles &amp; descriptions",
+      "Titles & descriptions",
       "48-hour turnaround",
       "Delivered for your approval",
     ],
@@ -135,8 +135,9 @@ export function Pricing() {
                         className={
                           tier.highlighted ? "text-white/90" : "text-brand-blue"
                         }
-                        dangerouslySetInnerHTML={{ __html: f }}
-                      />
+                      >
+                        {f}
+                      </span>
                     </li>
                   ))}
                 </ul>
