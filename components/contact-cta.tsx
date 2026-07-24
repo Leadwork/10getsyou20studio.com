@@ -22,12 +22,12 @@ export function ContactCta() {
               Contact
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-white text-balance sm:text-4xl md:text-5xl">
-              Ready to see what your listings could look like?
+              Your next 20 listing videos are one conversation away.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/75 sm:text-base">
-              Book a 10-minute demo with one of our producers. No slides, no
-              sales pitch — just a short conversation about your market and how
-              this would look for your listings.
+              Book a free 10-minute demo. No slides, no sales pitch — just a
+              short conversation about your market and what this would look
+              like for your listings. No credit card required.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

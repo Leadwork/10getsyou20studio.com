@@ -54,28 +54,67 @@ export function About() {
           </div>
 
           <div className="relative">
-            <div className="relative aspect-square overflow-hidden rounded-3xl border border-border bg-card">
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-brand-blue p-8 text-white shadow-[0_40px_80px_-40px_rgba(11,29,81,0.5)] sm:p-10">
               <div
                 aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blueDeep to-brand-violet"
-              />
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 opacity-40"
+                className="pointer-events-none absolute inset-0"
                 style={{
                   backgroundImage:
-                    "radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 40%), radial-gradient(circle at 75% 75%, rgba(139,124,252,0.55), transparent 50%)",
+                    "radial-gradient(500px 200px at 100% 0%, rgba(139,124,252,0.45), transparent 55%), radial-gradient(400px 250px at 0% 100%, rgba(109,93,251,0.35), transparent 55%)",
                 }}
               />
-              <div className="absolute inset-0 flex items-end p-8 sm:p-10">
-                <div className="space-y-3 text-white">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
-                    Part of the 10GetsYou20 brand
-                  </p>
-                  <p className="font-display text-2xl leading-snug text-white sm:text-3xl">
-                    Ten minutes of your time. Twenty ready-to-post videos.
-                  </p>
-                </div>
+              <div className="relative">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
+                  Part of the 10GetsYou20 brand
+                </p>
+                <p className="mt-4 font-display text-2xl leading-snug text-white sm:text-3xl">
+                  Ten minutes of your time.
+                  <br />
+                  Twenty ready-to-post videos.
+                </p>
+
+                <dl className="mt-8 grid grid-cols-2 gap-y-6 border-t border-white/10 pt-8">
+                  <div>
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">
+                      Producers
+                    </dt>
+                    <dd className="mt-1 font-display text-3xl font-semibold tracking-tight text-white">
+                      3
+                    </dd>
+                    <p className="text-xs text-white/60">CO · LA · TX</p>
+                  </div>
+                  <div>
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">
+                      Turnaround
+                    </dt>
+                    <dd className="mt-1 font-display text-3xl font-semibold tracking-tight text-white">
+                      48 hrs
+                    </dd>
+                    <p className="text-xs text-white/60">
+                      Conversation to delivery
+                    </p>
+                  </div>
+                  <div>
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">
+                      Per session
+                    </dt>
+                    <dd className="mt-1 font-display text-3xl font-semibold tracking-tight text-white">
+                      20
+                    </dd>
+                    <p className="text-xs text-white/60">
+                      Reels &amp; Shorts, ready to publish
+                    </p>
+                  </div>
+                  <div>
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">
+                      Editing on you
+                    </dt>
+                    <dd className="mt-1 font-display text-3xl font-semibold tracking-tight text-white">
+                      0
+                    </dd>
+                    <p className="text-xs text-white/60">Done for you, end to end</p>
+                  </div>
+                </dl>
               </div>
             </div>
             <div
