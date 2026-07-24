@@ -9,6 +9,7 @@ import {
   ImageIcon,
 } from "lucide-react";
 import type { SiteConfig } from "./types";
+import { SHARED_HERO } from "./shared";
 
 export const clipsConfig: SiteConfig = {
   id: "clips",
@@ -28,18 +29,9 @@ export const clipsConfig: SiteConfig = {
   },
 
   hero: {
-    eyebrow: "One listing. Twenty clips. Zero editing.",
-    headline: {
-      lead: "Short property clips ",
-      accent: "that get seen",
-      tail: ".",
-    },
-    subheadline:
-      "Hook-first vertical clips for TikTok, Reels, and Shorts — cut, captioned, and delivered from one 10-minute conversation with a U.S.-based producer.",
-    primaryCtaLabel: "See a session",
-    secondaryCtaLabel: "Visit 10GetsYou20.com",
+    ...SHARED_HERO,
     trustLine:
-      "The short-form clips division of the 10GetsYou20 brand · U.S.-based producers",
+      "10GetsYou20 Clips · A production division of the 10GetsYou20 brand",
   },
 
   services: {

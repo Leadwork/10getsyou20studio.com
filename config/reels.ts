@@ -9,6 +9,7 @@ import {
   ImageIcon,
 } from "lucide-react";
 import type { SiteConfig } from "./types";
+import { SHARED_HERO } from "./shared";
 
 export const reelsConfig: SiteConfig = {
   id: "reels",
@@ -28,18 +29,9 @@ export const reelsConfig: SiteConfig = {
   },
 
   hero: {
-    eyebrow: "Instagram Reels for real estate.",
-    headline: {
-      lead: "Reels that ",
-      accent: "show up in Explore",
-      tail: ".",
-    },
-    subheadline:
-      "Vertical Reels engineered for Instagram's algorithm — one conversation with a U.S. producer, twenty ready-to-post cuts, delivered in 48 hours.",
-    primaryCtaLabel: "See how it works",
-    secondaryCtaLabel: "Visit 10GetsYou20.com",
+    ...SHARED_HERO,
     trustLine:
-      "The Instagram-first division of the 10GetsYou20 brand · U.S.-based producers",
+      "10GetsYou20 Reels · A production division of the 10GetsYou20 brand",
   },
 
   services: {

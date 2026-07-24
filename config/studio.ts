@@ -9,6 +9,7 @@ import {
   Repeat,
 } from "lucide-react";
 import type { SiteConfig } from "./types";
+import { SHARED_HERO } from "./shared";
 
 export const studioConfig: SiteConfig = {
   id: "studio",
@@ -28,17 +29,9 @@ export const studioConfig: SiteConfig = {
   },
 
   hero: {
-    eyebrow: "10 Minutes. 20 Short-Form Videos.",
-    headline: {
-      lead: "Your listings deserve to ",
-      accent: "show up everywhere",
-      tail: ".",
-    },
-    subheadline:
-      "One 10-minute conversation. We turn it into 20 Reels & Shorts — done for you, delivered in 48 hours.",
-    primaryCtaLabel: "Learn More",
-    secondaryCtaLabel: "Visit 10GetsYou20.com",
-    trustLine: "Part of the 10GetsYou20 brand · Serving real estate professionals",
+    ...SHARED_HERO,
+    trustLine:
+      "10GetsYou20 Studio · A production division of the 10GetsYou20 brand",
   },
 
   services: {

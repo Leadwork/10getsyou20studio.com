@@ -9,6 +9,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import type { SiteConfig } from "./types";
+import { SHARED_HERO } from "./shared";
 
 export const mediaConfig: SiteConfig = {
   id: "media",
@@ -29,18 +30,9 @@ export const mediaConfig: SiteConfig = {
   },
 
   hero: {
-    eyebrow: "Real Estate Media Production",
-    headline: {
-      lead: "The media team ",
-      accent: "behind your listings",
-      tail: ".",
-    },
-    subheadline:
-      "A short-form media partner for real estate professionals — filmed from one guided conversation, edited by producers who know your market, delivered in 48 hours.",
-    primaryCtaLabel: "See how it works",
-    secondaryCtaLabel: "Visit 10GetsYou20.com",
+    ...SHARED_HERO,
     trustLine:
-      "A production division of the 10GetsYou20 brand · U.S.-based producers",
+      "10GetsYou20 Media · A production division of the 10GetsYou20 brand",
   },
 
   services: {

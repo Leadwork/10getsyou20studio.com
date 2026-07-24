@@ -53,14 +53,18 @@ export function Hero({ config }: HeroProps) {
             style={{ animationDelay: "160ms" }}
           >
             <Button asChild size="lg">
-              <a href="#how-it-works">
+              <a
+                href={hero.primaryCtaHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {hero.primaryCtaLabel}
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
             <Button asChild size="lg" variant="outline">
               <a
-                href="https://10getsyou20.com"
+                href={hero.secondaryCtaHref}
                 target="_blank"
                 rel="noopener noreferrer"
               >

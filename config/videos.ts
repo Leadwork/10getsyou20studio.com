@@ -9,6 +9,7 @@ import {
   Tags,
 } from "lucide-react";
 import type { SiteConfig } from "./types";
+import { SHARED_HERO } from "./shared";
 
 export const videosConfig: SiteConfig = {
   id: "videos",
@@ -28,18 +29,9 @@ export const videosConfig: SiteConfig = {
   },
 
   hero: {
-    eyebrow: "20 videos per session · 48-hour turnaround",
-    headline: {
-      lead: "Listing videos, ",
-      accent: "delivered in 48 hours",
-      tail: ".",
-    },
-    subheadline:
-      "Cinematic short-form videos for every listing — twenty ready-to-publish cuts from one 10-minute conversation, reformatted for every platform your buyers actually use.",
-    primaryCtaLabel: "See the workflow",
-    secondaryCtaLabel: "Visit 10GetsYou20.com",
+    ...SHARED_HERO,
     trustLine:
-      "The video division of the 10GetsYou20 brand · U.S.-based producers",
+      "10GetsYou20 Videos · A production division of the 10GetsYou20 brand",
   },
 
   services: {
