@@ -18,7 +18,7 @@ const producers: Producer[] = [
     region: "Colorado",
     bio: "Creates compelling short-form videos for residential homes, luxury properties, and real estate professionals. Every video is designed to highlight what makes a property stand out and capture the attention of today's buyers.",
     specialties: ["Residential", "Luxury", "Investment"],
-    hue: "from-brand-blue to-brand-violet",
+    hue: "from-brand-blue via-brand-blueDeep to-brand-violet",
   },
   {
     name: "Caitlyn Sharp",
@@ -27,7 +27,7 @@ const producers: Producer[] = [
     region: "Louisiana",
     bio: "Specializes in creating engaging videos for residential properties, luxury homes, and property management companies. With a focus on attracting qualified renters and buyers, every video is crafted to showcase each property's strongest features.",
     specialties: ["Residential", "Luxury", "Property Management"],
-    hue: "from-brand-violet to-brand-blueDeep",
+    hue: "from-brand-violet via-brand-blue to-brand-blueDeep",
   },
   {
     name: "Carl Sasyn",
@@ -36,7 +36,7 @@ const producers: Producer[] = [
     region: "Texas",
     bio: "Produces high-impact short-form videos for residential, commercial, and land & ranch properties. From family homes to investment properties and expansive acreage, every video is tailored to connect with the right audience and drive interest.",
     specialties: ["Residential", "Ranch & Land", "Commercial"],
-    hue: "from-brand-blueDeep to-brand-violetSoft",
+    hue: "from-brand-blueDeep via-brand-violet to-brand-violetSoft",
   },
 ];
 
@@ -61,54 +61,59 @@ export function Team() {
           {producers.map((p) => (
             <li
               key={p.name}
-              className="group flex flex-col rounded-3xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-violet/30 hover:shadow-[0_20px_50px_-25px_rgba(11,29,81,0.25)] sm:p-8"
+              className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-violet/30 hover:shadow-[0_20px_50px_-25px_rgba(11,29,81,0.25)]"
             >
-              <div className="flex items-start gap-5">
+              {/* Portrait header */}
+              <div
+                className={`relative aspect-[5/4] w-full overflow-hidden bg-gradient-to-br ${p.hue}`}
+                aria-hidden="true"
+              >
                 <div
-                  className={`relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br ${p.hue} font-display text-lg font-semibold text-white shadow-[0_10px_30px_-12px_rgba(11,29,81,0.5)]`}
-                  aria-hidden="true"
-                >
-                  <span
-                    className="absolute inset-0 opacity-40"
-                    style={{
-                      backgroundImage:
-                        "radial-gradient(circle at 30% 20%, rgba(255,255,255,0.4), transparent 45%)",
-                    }}
-                  />
-                  <span className="relative">{p.initials}</span>
+                  className="absolute inset-0 opacity-60"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(circle at 25% 20%, rgba(255,255,255,0.45), transparent 45%), radial-gradient(circle at 75% 80%, rgba(139,124,252,0.55), transparent 50%)",
+                  }}
+                />
+                <div
+                  className="absolute inset-0 opacity-30 mix-blend-overlay"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(60% 40% at 50% 100%, rgba(0,0,0,0.4), transparent 70%)",
+                  }}
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="font-display text-6xl font-semibold tracking-tight text-white/90 drop-shadow-[0_4px_20px_rgba(0,0,0,0.35)] sm:text-7xl">
+                    {p.initials}
+                  </span>
                 </div>
-                <div className="min-w-0">
-                  <h3 className="text-lg font-semibold text-brand-blue">
-                    {p.name}
-                  </h3>
-                  <p className="mt-0.5 text-[13px] font-medium uppercase tracking-[0.12em] text-brand-violet">
-                    {p.role}
-                  </p>
-                  <p className="mt-1.5 inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                    <MapPin className="h-3.5 w-3.5 text-brand-violet" />
-                    {p.region}
-                  </p>
+                <div className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-[11px] font-medium text-white backdrop-blur">
+                  <MapPin className="h-3 w-3" />
+                  {p.region}
                 </div>
               </div>
 
-              <p className="mt-6 text-[14.5px] leading-relaxed text-muted-foreground">
-                {p.bio}
-              </p>
-
-              <div className="mt-auto pt-6">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground/70">
-                  Specialties
+              {/* Body */}
+              <div className="flex flex-1 flex-col p-7 sm:p-8">
+                <h3 className="text-lg font-semibold text-brand-blue">
+                  {p.name}
+                </h3>
+                <p className="mt-0.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-brand-violet">
+                  {p.role}
                 </p>
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {p.specialties.map((s) => (
-                    <li
-                      key={s}
-                      className="inline-flex items-center rounded-full border border-border bg-white px-3 py-1 text-xs font-medium text-brand-blue"
-                    >
-                      {s}
-                    </li>
-                  ))}
-                </ul>
+
+                <p className="mt-5 text-[14.5px] leading-relaxed text-muted-foreground">
+                  {p.bio}
+                </p>
+
+                <div className="mt-auto pt-6">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground/70">
+                    Specialties
+                  </p>
+                  <p className="mt-2 text-[13.5px] font-medium leading-relaxed text-brand-blue">
+                    {p.specialties.join(" · ")}
+                  </p>
+                </div>
               </div>
             </li>
           ))}
