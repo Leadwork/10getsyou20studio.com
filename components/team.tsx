@@ -1,42 +1,39 @@
+import Image from "next/image";
 import { MapPin } from "lucide-react";
 
 interface Producer {
   name: string;
-  initials: string;
+  photo: string;
   role: string;
   region: string;
   bio: string;
   specialties: string[];
-  hue: string;
 }
 
 const producers: Producer[] = [
   {
     name: "Adam Winters",
-    initials: "AW",
+    photo: "/team/adam.webp",
     role: "Producer & Founder",
     region: "Colorado",
     bio: "Creates compelling short-form videos for residential homes, luxury properties, and real estate professionals. Every video is designed to highlight what makes a property stand out and capture the attention of today's buyers.",
     specialties: ["Residential", "Luxury", "Investment"],
-    hue: "from-brand-blue via-brand-blueDeep to-brand-violet",
   },
   {
     name: "Caitlyn Sharp",
-    initials: "CS",
+    photo: "/team/caitlyn.webp",
     role: "Producer",
     region: "Louisiana",
     bio: "Specializes in creating engaging videos for residential properties, luxury homes, and property management companies. With a focus on attracting qualified renters and buyers, every video is crafted to showcase each property's strongest features.",
     specialties: ["Residential", "Luxury", "Property Management"],
-    hue: "from-brand-violet via-brand-blue to-brand-blueDeep",
   },
   {
     name: "Carl Sasyn",
-    initials: "CS",
+    photo: "/team/carl.webp",
     role: "Producer",
     region: "Texas",
     bio: "Produces high-impact short-form videos for residential, commercial, and land & ranch properties. From family homes to investment properties and expansive acreage, every video is tailored to connect with the right audience and drive interest.",
     specialties: ["Residential", "Ranch & Land", "Commercial"],
-    hue: "from-brand-blueDeep via-brand-violet to-brand-violetSoft",
   },
 ];
 
@@ -64,30 +61,28 @@ export function Team() {
               className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-violet/30 hover:shadow-[0_20px_50px_-25px_rgba(11,29,81,0.25)]"
             >
               {/* Portrait header */}
-              <div
-                className={`relative aspect-[5/4] w-full overflow-hidden bg-gradient-to-br ${p.hue}`}
-                aria-hidden="true"
-              >
+              <div className="relative aspect-[5/4] w-full overflow-hidden bg-gradient-to-br from-brand-blueDeep via-brand-blue to-brand-violet">
                 <div
+                  aria-hidden="true"
                   className="absolute inset-0 opacity-60"
                   style={{
                     backgroundImage:
-                      "radial-gradient(circle at 25% 20%, rgba(255,255,255,0.45), transparent 45%), radial-gradient(circle at 75% 80%, rgba(139,124,252,0.55), transparent 50%)",
-                  }}
-                />
-                <div
-                  className="absolute inset-0 opacity-30 mix-blend-overlay"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(60% 40% at 50% 100%, rgba(0,0,0,0.4), transparent 70%)",
+                      "radial-gradient(circle at 25% 20%, rgba(255,255,255,0.35), transparent 45%), radial-gradient(circle at 75% 80%, rgba(139,124,252,0.5), transparent 50%)",
                   }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-display text-6xl font-semibold tracking-tight text-white/90 drop-shadow-[0_4px_20px_rgba(0,0,0,0.35)] sm:text-7xl">
-                    {p.initials}
-                  </span>
+                  <div className="relative h-40 w-40 overflow-hidden rounded-full ring-4 ring-white/30 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.5)] sm:h-44 sm:w-44">
+                    <Image
+                      src={p.photo}
+                      alt={`Portrait of ${p.name}, ${p.role} based in ${p.region}`}
+                      fill
+                      sizes="(max-width: 768px) 40vw, 200px"
+                      className="object-cover"
+                      priority={p.name === "Adam Winters"}
+                    />
+                  </div>
                 </div>
-                <div className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-[11px] font-medium text-white backdrop-blur">
+                <div className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-[11px] font-medium text-white backdrop-blur">
                   <MapPin className="h-3 w-3" />
                   {p.region}
                 </div>
