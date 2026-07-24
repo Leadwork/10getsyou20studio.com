@@ -1,7 +1,11 @@
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export function About() {
+interface AboutProps {
+  brandFull: string;
+}
+
+export function About({ brandFull }: AboutProps) {
   return (
     <section
       id="about"
@@ -18,9 +22,9 @@ export function About() {
             </h2>
             <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
               <p>
-                10GetsYou20 Studio is the production arm of the 10GetsYou20
-                brand — founded by Adam Winters and now working with a small
-                network of producers across Colorado, Louisiana, and Texas.
+                {brandFull} is a production division of the 10GetsYou20 brand
+                — founded by Adam Winters and now working with a small network
+                of U.S.-based producers across Colorado, Louisiana, and Texas.
               </p>
               <p>
                 We built the studio around one idea: the best real estate

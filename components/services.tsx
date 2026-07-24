@@ -1,73 +1,12 @@
-import {
-  Film,
-  Home,
-  Instagram,
-  Facebook,
-  Youtube,
-  Sparkles,
-  Scissors,
-  Repeat,
-  type LucideIcon,
-} from "lucide-react";
+import type { SiteConfig } from "@/config";
 
-interface Service {
-  icon: LucideIcon;
-  title: string;
-  description: string;
+interface ServicesProps {
+  config: SiteConfig;
 }
 
-const services: Service[] = [
-  {
-    icon: Film,
-    title: "Listing Videos",
-    description:
-      "20 short-form videos per listing, cut vertical and ready for every major short-form platform.",
-  },
-  {
-    icon: Home,
-    title: "Property Walkthroughs",
-    description:
-      "Room-by-room walkthrough clips that let buyers experience the home before they step inside.",
-  },
-  {
-    icon: Instagram,
-    title: "Instagram Reels",
-    description:
-      "Vertical, hook-first Reels formatted for feed, Explore, and Stories reach.",
-  },
-  {
-    icon: Facebook,
-    title: "Facebook Videos",
-    description:
-      "Native-format videos optimized for Facebook feed and short-form video placement.",
-  },
-  {
-    icon: Youtube,
-    title: "YouTube Shorts",
-    description:
-      "Vertical Shorts crafted around search-friendly hooks and clear on-screen text.",
-  },
-  {
-    icon: Sparkles,
-    title: "Custom Thumbnails",
-    description:
-      "High-converting, on-brand thumbnails for every short — built to earn the tap.",
-  },
-  {
-    icon: Scissors,
-    title: "Editing & Captions",
-    description:
-      "Professional cuts, captions, licensed audio, and metadata — delivered ready to publish.",
-  },
-  {
-    icon: Repeat,
-    title: "10-Day Posting Schedule",
-    description:
-      "Every set ships with a posting cadence so you know exactly what goes live, and when.",
-  },
-];
+export function Services({ config }: ServicesProps) {
+  const { services } = config;
 
-export function Services() {
   return (
     <section id="services" className="scroll-mt-24 py-24 md:py-32">
       <div className="container">
@@ -76,16 +15,15 @@ export function Services() {
             Services
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-brand-blue text-balance sm:text-4xl md:text-5xl">
-            Everything you need to show up on video.
+            {services.heading}
           </h2>
           <p className="mt-4 text-base text-muted-foreground text-pretty sm:text-lg">
-            A production workflow built around real estate — from your first
-            listing to a consistent short-form presence across every platform.
+            {services.subheading}
           </p>
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map(({ icon: Icon, title, description }) => (
+          {services.items.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
               className="group relative rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-violet/30 hover:shadow-[0_20px_50px_-25px_rgba(11,29,81,0.25)]"

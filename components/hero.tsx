@@ -1,7 +1,14 @@
 import { ArrowRight, Sparkles, Mic, Film, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import type { SiteConfig } from "@/config";
 
-export function Hero() {
+interface HeroProps {
+  config: SiteConfig;
+}
+
+export function Hero({ config }: HeroProps) {
+  const { hero } = config;
+
   return (
     <section className="relative overflow-hidden pt-32 md:pt-40">
       <div
@@ -17,29 +24,28 @@ export function Hero() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="animate-fade-in inline-flex items-center gap-2 rounded-full border border-border bg-white/70 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-brand-blue backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 text-brand-violet" />
-            10 Minutes. 20 Short-Form Videos.
+            {hero.eyebrow}
           </div>
 
           <h1 className="animate-fade-up mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-brand-blue text-balance sm:text-5xl md:text-6xl lg:text-7xl">
-            Your listings deserve to{" "}
+            {hero.headline.lead}
             <span className="relative inline-block">
               <span className="relative z-10 bg-gradient-to-br from-brand-violet to-brand-blue bg-clip-text text-transparent">
-                show up everywhere
+                {hero.headline.accent}
               </span>
               <span
                 aria-hidden="true"
                 className="absolute inset-x-0 bottom-1 -z-0 h-2 rounded bg-brand-violet/15"
               />
             </span>
-            .
+            {hero.headline.tail}
           </h1>
 
           <p
             className="animate-fade-up mt-6 text-lg leading-relaxed text-muted-foreground text-pretty sm:text-xl"
             style={{ animationDelay: "80ms" }}
           >
-            One 10-minute conversation. We turn it into 20 Reels &amp; Shorts —
-            done for you, delivered in 48 hours.
+            {hero.subheadline}
           </p>
 
           <div
@@ -48,7 +54,7 @@ export function Hero() {
           >
             <Button asChild size="lg">
               <a href="#how-it-works">
-                Learn More
+                {hero.primaryCtaLabel}
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
@@ -58,7 +64,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visit 10GetsYou20.com
+                {hero.secondaryCtaLabel}
               </a>
             </Button>
           </div>
@@ -67,7 +73,7 @@ export function Hero() {
             className="animate-fade-up mt-6 text-xs text-muted-foreground"
             style={{ animationDelay: "220ms" }}
           >
-            Part of the 10GetsYou20 brand · Serving real estate professionals
+            {hero.trustLine}
           </p>
         </div>
 
@@ -104,7 +110,10 @@ export function Hero() {
                 ].map((li) => (
                   <li key={li} className="flex items-center gap-2">
                     <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-violet/15">
-                      <Check className="h-2.5 w-2.5 text-brand-violet" strokeWidth={3} />
+                      <Check
+                        className="h-2.5 w-2.5 text-brand-violet"
+                        strokeWidth={3}
+                      />
                     </span>
                     {li}
                   </li>
@@ -140,7 +149,10 @@ export function Hero() {
                 ].map((li) => (
                   <li key={li} className="flex items-center gap-2">
                     <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-violet/15">
-                      <Check className="h-2.5 w-2.5 text-brand-violet" strokeWidth={3} />
+                      <Check
+                        className="h-2.5 w-2.5 text-brand-violet"
+                        strokeWidth={3}
+                      />
                     </span>
                     {li}
                   </li>
@@ -155,7 +167,7 @@ export function Hero() {
                 className="pointer-events-none absolute inset-0 opacity-70"
                 style={{
                   backgroundImage:
-                    "radial-gradient(400px 200px at 100% 0%, rgba(139,124,252,0.55), transparent 55%), radial-gradient(300px 200px at 0% 100%, rgba(109,93,251,0.3), transparent 55%)",
+                    "radial-gradient(400px 200px at 100% 0%, hsl(var(--accent-hue) 96% 68% / 0.55), transparent 55%), radial-gradient(300px 200px at 0% 100%, hsl(var(--accent-hue) 96% 62% / 0.3), transparent 55%)",
                 }}
               />
               <div className="relative flex flex-1 flex-col">

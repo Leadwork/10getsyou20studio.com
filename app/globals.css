@@ -4,6 +4,11 @@
 
 @layer base {
   :root {
+    /* --accent-hue is set inline on <html> per site variant (0..360).
+       Fallback here matches the Studio variant so local dev + tests
+       render correctly without the runtime injection. */
+    --accent-hue: 247;
+
     --background: 0 0% 100%;
     --foreground: 226 60% 8%;
 
@@ -22,7 +27,7 @@
     --muted: 220 15% 96%;
     --muted-foreground: 226 12% 42%;
 
-    --accent: 247 96% 68%;
+    --accent: var(--accent-hue) 96% 68%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -30,7 +35,7 @@
 
     --border: 220 15% 92%;
     --input: 220 15% 92%;
-    --ring: 247 96% 68%;
+    --ring: var(--accent-hue) 96% 68%;
 
     --radius: 1rem;
   }

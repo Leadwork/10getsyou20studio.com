@@ -12,26 +12,30 @@ import { Pricing } from "@/components/pricing";
 import { Faq } from "@/components/faq";
 import { ContactCta } from "@/components/contact-cta";
 import { Footer } from "@/components/footer";
+import { getSiteConfig } from "@/lib/site";
 
 export default function Home() {
+  const config = getSiteConfig();
+  const { parent, suffix, full } = config.brand;
+
   return (
     <>
-      <Navbar />
+      <Navbar parent={parent} suffix={suffix} />
       <main id="main">
-        <Hero />
+        <Hero config={config} />
         <Stats />
-        <Services />
+        <Services config={config} />
         <HowItWorks />
         <Deliverables />
         <RealProducers />
         <WhyChooseUs />
         <Team />
-        <About />
+        <About brandFull={full} />
         <Pricing />
         <Faq />
         <ContactCta />
       </main>
-      <Footer />
+      <Footer parent={parent} suffix={suffix} brandFull={full} />
     </>
   );
 }

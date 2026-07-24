@@ -1,12 +1,29 @@
 import type { MetadataRoute } from "next";
+import { getSiteOrigin } from "@/lib/site";
 
-const base = "https://10getsyou20studio.com";
+export const dynamic = "force-dynamic";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const base = getSiteOrigin();
   const now = new Date();
   return [
-    { url: `${base}/`, lastModified: now, changeFrequency: "monthly", priority: 1 },
-    { url: `${base}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${base}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    {
+      url: `${base}/`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${base}/privacy`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${base}/terms`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 }

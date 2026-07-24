@@ -44,8 +44,11 @@ const config: Config = {
         brand: {
           blue: "#0B1D51",
           blueDeep: "#050E2E",
-          violet: "#6D5DFB",
-          violetSoft: "#8B7CFC",
+          /* brand-violet is the per-variant accent hue. Saturation and
+             lightness stay constant so the family reads as one brand,
+             but the hue rotates a few degrees per domain. */
+          violet: "hsl(var(--accent-hue) 96% 68%)",
+          violetSoft: "hsl(var(--accent-hue) 96% 76%)",
         },
       },
       fontFamily: {

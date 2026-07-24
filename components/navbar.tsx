@@ -17,7 +17,12 @@ const NAV_LINKS = [
 
 const MAIN_SITE = "https://10getsyou20.com";
 
-export function Navbar() {
+interface NavbarProps {
+  parent: string;
+  suffix: string;
+}
+
+export function Navbar({ parent, suffix }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -46,7 +51,7 @@ export function Navbar() {
       )}
     >
       <div className="container flex h-16 items-center justify-between md:h-20">
-        <Logo />
+        <Logo parent={parent} suffix={suffix} />
 
         <nav
           aria-label="Primary"

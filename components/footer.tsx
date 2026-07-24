@@ -4,7 +4,13 @@ import { Logo } from "@/components/logo";
 
 const MAIN_SITE = "https://10getsyou20.com";
 
-export function Footer() {
+interface FooterProps {
+  parent: string;
+  suffix: string;
+  brandFull: string;
+}
+
+export function Footer({ parent, suffix, brandFull }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
@@ -12,9 +18,9 @@ export function Footer() {
       <div className="container py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Logo />
+            <Logo parent={parent} suffix={suffix} />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              10GetsYou20 Studio is part of the 10GetsYou20 brand, focused on
+              {brandFull} is part of the 10GetsYou20 brand, focused on
               short-form video production for real estate professionals.
             </p>
             <a
@@ -93,7 +99,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <p>© {year} 10GetsYou20 Studio. All rights reserved.</p>
+          <p>© {year} {brandFull}. All rights reserved.</p>
           <p>
             Part of the{" "}
             <a
