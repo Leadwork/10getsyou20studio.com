@@ -3,24 +3,24 @@ import { FileText, Mic, Send } from "lucide-react";
 const steps = [
   {
     n: "01",
-    icon: FileText,
-    title: "Share your listing",
+    icon: Mic,
+    title: "Talk about your listing",
     description:
-      "Send us the property details — address, photos, and any key selling points you want highlighted.",
+      "A casual 10-minute conversation with your producer. No prep, no equipment, no script — we guide the whole thing.",
   },
   {
     n: "02",
-    icon: Mic,
-    title: "Record one short conversation",
+    icon: FileText,
+    title: "We produce everything",
     description:
-      "A brief guided call captures your voice, your angle, and the story behind the home.",
+      "Vertical edits, captions, custom thumbnails, licensed audio, and a 10-day posting schedule — all built around your listing.",
   },
   {
     n: "03",
     icon: Send,
-    title: "Receive ready-to-publish videos",
+    title: "48-hour turnaround",
     description:
-      "We deliver a set of edited, platform-ready short-form videos you can post right away.",
+      "You receive 20 ready-to-publish short-form videos within two business days, sent for your approval before anything goes live.",
   },
 ];
 
@@ -40,7 +40,7 @@ export function HowItWorks() {
             How It Works
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-brand-blue text-balance sm:text-4xl md:text-5xl">
-            Three steps. One conversation. A month of content.
+            One conversation. Twenty videos. Two-day turnaround.
           </h2>
         </div>
 

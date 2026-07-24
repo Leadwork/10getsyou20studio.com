@@ -1,5 +1,8 @@
-import { Mail, ArrowUpRight } from "lucide-react";
+import { Mail, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const CALENDLY =
+  "https://calendly.com/d/dv2z-8dc-g8v/10-minute-real-estate-demo";
 
 export function ContactCta() {
   return (
@@ -22,15 +25,16 @@ export function ContactCta() {
               Ready to see what your listings could look like?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/75 sm:text-base">
-              Tell us a bit about your business and we&apos;ll get back to you
-              with next steps.
+              Book a 10-minute demo with one of our producers. No slides, no
+              sales pitch — just a short conversation about your market and how
+              this would look for your listings.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" variant="accent">
-                <a href="mailto:hello@10getsyou20studio.com">
-                  <Mail className="h-4 w-4" />
-                  hello@10getsyou20studio.com
+                <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                  <Calendar className="h-4 w-4" />
+                  Book a 10-minute demo
                 </a>
               </Button>
               <Button
@@ -39,13 +43,9 @@ export function ContactCta() {
                 variant="outline"
                 className="border-white/20 bg-white/5 text-white hover:border-white/40 hover:bg-white/10"
               >
-                <a
-                  href="https://10getsyou20.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit Main Website
-                  <ArrowUpRight className="h-4 w-4" />
+                <a href="mailto:hello@10getsyou20studio.com">
+                  <Mail className="h-4 w-4" />
+                  hello@10getsyou20studio.com
                 </a>
               </Button>
             </div>

@@ -17,14 +17,14 @@ export function Hero() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="animate-fade-in inline-flex items-center gap-2 rounded-full border border-border bg-white/70 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-brand-blue backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 text-brand-violet" />
-            10GetsYou20 Studio
+            10 Minutes. 20 Short-Form Videos.
           </div>
 
           <h1 className="animate-fade-up mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-brand-blue text-balance sm:text-5xl md:text-6xl lg:text-7xl">
-            Professional short-form video production for{" "}
+            Your listings deserve to{" "}
             <span className="relative inline-block">
               <span className="relative z-10 bg-gradient-to-br from-brand-violet to-brand-blue bg-clip-text text-transparent">
-                real estate agents
+                show up everywhere
               </span>
               <span
                 aria-hidden="true"
@@ -38,8 +38,8 @@ export function Hero() {
             className="animate-fade-up mt-6 text-lg leading-relaxed text-muted-foreground text-pretty sm:text-xl"
             style={{ animationDelay: "80ms" }}
           >
-            Turn one property listing into engaging short-form videos for
-            Instagram, Facebook, YouTube Shorts, TikTok, and more.
+            One 10-minute conversation. We turn it into 20 Reels &amp; Shorts —
+            done for you, delivered in 48 hours.
           </p>
 
           <div
@@ -47,7 +47,7 @@ export function Hero() {
             style={{ animationDelay: "160ms" }}
           >
             <Button asChild size="lg">
-              <a href="#services">
+              <a href="#how-it-works">
                 Learn More
                 <ArrowRight className="h-4 w-4" />
               </a>

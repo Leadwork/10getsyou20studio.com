@@ -21,7 +21,7 @@ const services: Service[] = [
     icon: Film,
     title: "Listing Videos",
     description:
-      "Cinematic property videos that showcase each listing with polished pacing, color, and sound.",
+      "20 short-form videos per listing, cut vertical and ready for every major short-form platform.",
   },
   {
     icon: Home,
@@ -49,21 +49,21 @@ const services: Service[] = [
   },
   {
     icon: Sparkles,
-    title: "Social Media Content",
+    title: "Custom Thumbnails",
     description:
-      "A consistent posting cadence of shorts, cuts, and highlights across every platform you use.",
+      "High-converting, on-brand thumbnails for every short — built to earn the tap.",
   },
   {
     icon: Scissors,
-    title: "Video Editing",
+    title: "Editing & Captions",
     description:
-      "Professional cuts, captions, motion graphics, and licensed audio, delivered ready-to-publish.",
+      "Professional cuts, captions, licensed audio, and metadata — delivered ready to publish.",
   },
   {
     icon: Repeat,
-    title: "Content Repurposing",
+    title: "10-Day Posting Schedule",
     description:
-      "One conversation, one shoot — turned into multiple short-form assets for weeks of posts.",
+      "Every set ships with a posting cadence so you know exactly what goes live, and when.",
   },
 ];
 

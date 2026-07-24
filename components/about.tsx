@@ -18,19 +18,21 @@ export function About() {
             </h2>
             <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
               <p>
-                10GetsYou20 Studio is part of the 10GetsYou20 brand — a small
-                team focused on helping real estate professionals turn listings
-                and conversations into high-quality short-form content.
+                10GetsYou20 Studio is the production arm of the 10GetsYou20
+                brand — founded by Adam Winters and now working with a small
+                network of producers across Colorado, Louisiana, and Texas.
               </p>
               <p>
-                We aim to make the process feel simple: share the listing, have
-                one short conversation, and receive a set of edited videos ready
-                to publish. No complicated shoots, no long production cycles.
+                We built the studio around one idea: the best real estate
+                short-form content comes from an agent who sounds like
+                themselves. Ten minutes of natural conversation, guided by a
+                producer who understands your market, is enough to fill a month
+                of posts.
               </p>
               <p>
-                The goal is quiet, consistent output — content that reflects
-                well on your business and gives you something worth posting
-                every week.
+                No complicated shoots. No long production cycles. Just a
+                consistent, professional output that reflects well on your
+                business — and gives you something worth posting every week.
               </p>
             </div>
 
@@ -71,8 +73,7 @@ export function About() {
                     Part of the 10GetsYou20 brand
                   </p>
                   <p className="font-display text-2xl leading-snug text-white sm:text-3xl">
-                    High-quality short-form content for real estate
-                    professionals.
+                    Ten minutes of your time. Twenty ready-to-post videos.
                   </p>
                 </div>
               </div>

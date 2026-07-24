@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | 10GetsYou20 Studio",
   },
   description:
-    "Professional short-form video production for real estate agents. Transform property listings into engaging social media content with 10GetsYou20 Studio.",
+    "10 minutes. 20 short-form videos. The production arm of 10GetsYou20 — one guided conversation turned into 20 Reels & Shorts for real estate agents, delivered in 48 hours.",
   keywords: [
     "real estate video production",
     "short-form video",
@@ -46,14 +46,14 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: "10GetsYou20 Studio | Professional Real Estate Video Production",
     description:
-      "Professional short-form video production for real estate agents. Transform property listings into engaging social media content.",
+      "10 minutes. 20 short-form videos. One conversation turned into 20 Reels & Shorts for real estate agents, delivered in 48 hours.",
     siteName: "10GetsYou20 Studio",
   },
   twitter: {
     card: "summary_large_image",
     title: "10GetsYou20 Studio | Professional Real Estate Video Production",
     description:
-      "Professional short-form video production for real estate agents.",
+      "10 minutes. 20 short-form videos. Delivered in 48 hours.",
   },
   robots: {
     index: true,
