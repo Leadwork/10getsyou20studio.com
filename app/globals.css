@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 226 60% 8%;
+
+    --card: 220 25% 98%;
+    --card-foreground: 226 60% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 226 60% 8%;
+
+    --primary: 227 76% 18%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 226 60% 8%;
+
+    --muted: 220 15% 96%;
+    --muted-foreground: 226 12% 42%;
+
+    --accent: 247 96% 68%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 92%;
+    --input: 220 15% 92%;
+    --ring: 247 96% 68%;
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    @apply bg-brand-violet/20 text-brand-blue;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(11, 29, 81, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(11, 29, 81, 0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .bg-gradient-hero {
+    background:
+      radial-gradient(1200px 500px at 85% -10%, rgba(109, 93, 251, 0.14), transparent 60%),
+      radial-gradient(900px 500px at -10% 20%, rgba(11, 29, 81, 0.08), transparent 55%);
+  }
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
+            mask-image: linear-gradient(to bottom, black 60%, transparent);
+  }
+}
